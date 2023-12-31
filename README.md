@@ -6,3 +6,4 @@
  the songs of the playlist are loaded in the library.</p>
 
 <i>Thanks for reading enjoy coding!</i>🤗
+<span>Email:</span><address>kabirahmad40allah@gmail.com</address>
