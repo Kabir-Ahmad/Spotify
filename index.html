@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <title>Spotify - Web Player: Music for everyone</title>
+  </head>
+
+  <body>
+    <div class="container-fluid d-flex justify-content-between px-2 pt-2">
+      <div class="left">
+        <div class="close">
+          <img
+            class="invert"
+            src="img/close.svg"
+            alt="image for hamburger icon"
+          />
+        </div>
+        <div class="home text-light rounded bg-gray px-4 py-3">
+          <div class="logo ps-4">
+            <a href="index.html"
+              ><img
+                class="invert"
+                style="width: 12rem"
+                src="img/logo.svg"
+                alt="image for logo"
+            /></a>
+          </div>
+          <ul class="p-0">
+            <li class="d-flex align-items-center pt-3">
+              <img
+                class="invert"
+                src="img/home.svg"
+                alt="image for home icon"
+              />Home
+            </li>
+            <li class="d-flex align-items-center pt-3">
+              <img
+                class="invert"
+                src="img/search.svg"
+                alt="image for search icon"
+              />Search
+            </li>
+          </ul>
+        </div>
+        <div
+          class="library rounded text-light bg-gray mt-2 px-4 py-3 position-relative"
+        >
+          <div class="heading d-flex align-items-center">
+            <img
+              class="invert"
+              src="img/playlist.svg"
+              alt="image for playlist icon"
+            />
+            <h2 class="m-0">Your library</h2>
+          </div>
+          <div class="songList my-2 pt-3">
+            <ul></ul>
+          </div>
+          <div class="footer d-flex position-absolute pb-3">
+            <div>
+              <a href="https://www.spotify.com/ae-en/legal/"
+                ><span>Legal</span></a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/ae-en/privacy/"
+                ><span>Privacy Center</span></a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/ae-en/legal/privacy-policy/"
+                ><span>Privacy Policy</span></a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/ae-en/legal/cookies-policy/"
+                ><span>Cookies</span></a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/ae-en/legal/privacy-policy/#s3"
+                ><span>About Ads</span></a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/ae-en/accessibility/"
+                ><span>Accessibility</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right rounded mx-2">
+        <div
+          class="header rounded-top d-flex justify-content-between align-items-center px-4 py-2"
+        >
+          <nav>
+            <div class="hamburger pe-5">
+              <img
+                class="invert"
+                src="img/hamburger.svg"
+                alt="image for hamburger icon"
+              />
+            </div>
+            <svg
+              class="arrow"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18"
+                stroke="#ffffff"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <svg
+              class="arrow"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18"
+                stroke="#ffffff"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </nav>
+          <div
+            class="buttons d-flex justify-content-between align-items-center"
+          >
+            <button>Sign up</button>
+            <button>Login</button>
+          </div>
+        </div>
+        <div class="spotifyPlaylists py-2 px-4">
+          <h1 class="fs-3">Spotify Playlists</h1>
+          <div class="card-container d-flex"></div>
+          <div class="playBar d-flex align-items-center mb-2 px-4">
+            <div class="seekbar p-0">
+              <div class="circle"></div>
+            </div>
+            <div class="songInfo col-md-4"></div>
+            <div
+              class="songButtons col-md-2 d-flex justify-content-center mx-auto align-items-center"
+            >
+              <img
+                class="backward pe-3"
+                src="img/backward.svg"
+                alt="image for backward icon"
+              />
+              <img
+                id="previous"
+                title="previous"
+                src="img/prev.svg"
+                alt="image for previous button"
+              />
+              <img
+                id="play_music"
+                title="play"
+                src="img/play.svg"
+                alt="image for play button"
+              />
+              <img
+                id="next"
+                title="next"
+                src="img/next.svg"
+                alt="image for next button"
+              />
+              <img
+                class="forward ps-3"
+                src="img/forward.svg"
+                alt="image for forward icon"
+              />
+            </div>
+            <div class="outer col-md-1 d-flex justify-content-start">
+              <div class="songTime">00:00/00:00</div>
+            </div>
+            <div
+              class="volume col-md-3 d-flex align-items-center justify-content-end"
+            >
+              <img src="img/volume.svg" alt="image for volume icon" />
+              <div class="range d-flex align-items-center">
+                <input type="range" value="100" min="0" max="100" step="5" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
